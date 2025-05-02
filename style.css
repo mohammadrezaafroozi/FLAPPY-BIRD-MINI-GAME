@@ -1,0 +1,232 @@
+
+body{
+    display: flex;
+    background-color: grey;
+    
+}
+h1{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 63px;
+    color: orangered;
+    background-color: wheat;
+    border: 10px solid gold;
+    position: absolute;
+    left: 0px;
+    top: 670px;
+    z-index: +3;
+   
+}
+.container{
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    left: 80px;
+    
+
+}
+.sky{
+    width: 500px;
+    height: 580px;
+    position: absolute;
+    background-image: url(img/sky.png);
+}
+.ground{
+    width: 500px;
+    height: 150px;
+    background-image: url(img/ground.png);
+    position: absolute;
+    top: 580px;
+    z-index: +1;
+}
+.bird{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    background-image: url(img/bird.png);
+    left: 220px;
+    bottom: 100px;
+}
+.obsticle{
+    background-image: url(img/pipe.png);
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+.timer {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+
+
+.bottomfoot{ z-index: 999;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(137, 43, 226, 0.608);
+    display: flex;
+   
+    
+   
+   
+    >span{
+        width: 400px;
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:end;
+        align-items:center;
+        margin-left: 5%;
+        >p{
+           text-transform: capitalize;
+           font-size: 12px;
+          font-weight: 400;
+           margin-left: 5%;
+          font-family:  arial;
+          color: black;
+        }
+    >img{
+        width: 100px;
+        height: 100px;
+        border-end-start-radius: 50%;
+
+    }
+
+    }
+    >div{
+        width: 600px;
+        margin-top: 10px;
+        justify-content: center;
+        >a{
+            
+        font-size: 30px;
+        color: #3d3479;
+        margin: 20px;
+        transition-duration: 0.5s;
+        height:fit-content;
+        
+        
+        
+    }
+}
+}
+
+
+.footer {
+    z-index: 999;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    &:hover {
+
+        >img,
+        &::before {
+            animation-play-state: paused;
+        }
+
+        >a {
+            left: -30%;
+        }
+    }
+
+    >img,
+    &::before {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::before {
+        content: '';
+        background-color: #3d3479;
+        animation: fancybefore infinite ease-out alternate 3s;
+    }
+
+    >img {
+        animation: fancyimg infinite ease-out alternate 5s;
+
+    }
+
+    >figcaption {
+        position: absolute;
+        width: 130%;
+        text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        left: -20px;
+        font-size: 25px;
+        color: #3d3479;
+        bottom: -45px;
+    }
+
+    >a {
+        position: absolute;
+        left: 8%;
+        transition: 1s;
+        color: #3d3479;
+        font-size: 35px;
+
+        &:nth-of-type(1) {
+            top: 10%;
+        }
+
+        &:nth-of-type(2) {
+            top: 40%;
+            transition-delay: .4s;
+        }
+
+        &:nth-of-type(3) {
+            top: 70%;
+            transition-delay: .8s;
+        }
+    }
+
+
+}
+
+@keyframes fancybefore {
+    0% {
+        border-radius: 66% 34% 70% 30% / 41% 54% 46% 59%;
+    }
+
+    50% {
+        border-radius: 64% 36% 38% 62% / 60% 73% 27% 40%;
+    }
+
+    100% {
+        border-radius: 27% 73% 57% 43% / 41% 60% 40% 59%;
+    }
+}
+
+@keyframes fancyimg {
+    0% {
+        border-radius: 27% 73% 57% 43% / 41% 60% 40% 59%;
+    }
+
+    50% {
+        border-radius: 66% 34% 70% 30% / 41% 54% 46% 59%;
+    }
+
+    100% {
+        border-radius: 64% 36% 38% 62% / 60% 73% 27% 40%;
+    }
+}
+ @media(max-width:500px){
+    figure{
+        scale:.7;
+    }
+   }
