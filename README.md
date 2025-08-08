@@ -1,4 +1,5 @@
 # FLAPPY-BIRD-MINI-GAME
+- play with spacebar on keyboard
 ![Image](https://github.com/user-attachments/assets/cf4148e5-a53c-4712-ae76-e0d0ab2cfbbc)
 
 ![view](https://github.com/user-attachments/assets/ff171e7a-9eb5-46ae-99ac-a5da12a39f63)
